@@ -32,5 +32,6 @@ const newJokeButton = document.getElementById("newJokeBtn");
 
 // Sets up a click event listener to fetch and display a new joke upon clicking the newJokeButton.
 newJokeButton.addEventListener("click", fetchJoke);
+
 // We have every joke used printed in console.log
 // Get console.logged jokes and display them in a scrollable window called history
