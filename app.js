@@ -21,6 +21,14 @@ const data = await response.json();
 console.log(data.joke);
 const jokeElement = document.getElementById("joke");
 jokeElement.textContent = data.joke;
+
+const jokeHistory = document.getElementById("joke-history");
+
+const originalLog = console.log;
+console.log = function() {
+  originalLog.apply(console, arguments);
+  jokeHistory.innerHTML += `${data.joke}<br>`;
+};
 }
 
 
@@ -35,3 +43,4 @@ newJokeButton.addEventListener("click", fetchJoke);
 
 // We have every joke used printed in console.log
 // Get console.logged jokes and display them in a scrollable window called history
+

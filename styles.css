@@ -37,6 +37,11 @@ h1 {
   text-align: center;
 }
 
+#joke-history {
+  display: flex;
+  flex-direction: column;
+}
+
 button {
   display: block;
   margin: 10px auto;
